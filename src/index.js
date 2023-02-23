@@ -6,6 +6,13 @@ const app = express();
 const path = require("path");
 const port = 3000;
 
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+app.use(express.json());
+
 // Set static route folder
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -27,6 +34,11 @@ app.get("/search", (req, res) => {
 
 app.get("/", (req, res) => {
   res.render("home");
+});
+
+app.post("/search", (req, res) => {
+  console.log(req.body);
+  res.send("");
 });
 
 app.listen(port, () => {
