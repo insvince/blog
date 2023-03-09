@@ -1,2 +1,5 @@
 .navbar {
   font-size: 1.5rem; }
+  .navbar a img {
+    width: 80px;
+    height: 40px; }

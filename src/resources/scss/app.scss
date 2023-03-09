@@ -1,5 +1,9 @@
-@import 'variables';
+@import "variables";
 
 .navbar {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  a img {
+    width: 80px;
+    height: 40px;
+  }
 }
